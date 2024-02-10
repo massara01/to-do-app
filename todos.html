@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Todo List</title>
+<link rel="stylesheet" href="todos.css">
+</head>
+<body>
+
+<section class="todoapp">
+    <header class="header">
+        <h1>Ma Todo List</h1>
+        <div class="input-container">
+            <input class="new-todo" id="todo-input" type="text" placeholder="Que dois-je faire?">
+            <label class="visually-hidden" for="todo-input">Nouvelle tâche</label>
+            <!--<button id="completeAllBtn">✔️</button>-->
+        </div>
+    </header>
+    <main class="main">
+        <ul class="todo-list" id="todo-list"></ul>
+    </main>
+    <div class="buttons-container" id="buttons-container" style="display: none;">
+        <p id="activeTasksCount">0 tâches actives</p> 
+        <button id="allBtn">tous</button>
+        <button id="activeBtn">Actifs</button>
+        <button id="completedBtn">Complétés</button>
+        <button id="clearCompletedBtn">Clear </button>
+    </div>
+</section>
+
+<footer class="info">
+    <p>Double-cliquez pour éditer une tâche</p>
+    <p>Créé par Massarra</p>
+    
+</footer>
+
+<script src="todos.js"></script>
+</body>
+</html>
+
+
+

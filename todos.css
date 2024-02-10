@@ -1,0 +1,200 @@
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style de base du corps et de la police */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Conteneur principal */
+.todoapp {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* En-tête */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #6c5ce7;
+}
+
+.input-container {
+  margin-top: 20px;
+  background-color: transparent; /* Rendre le fond transparent */
+  border-color: transparent; /* Rendre la bordure transparente */
+}
+
+.new-todo {
+  width: calc(100% - 40px);
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent; /* Rendre le fond transparent */
+  border-color: transparent;
+}
+
+/* Liste de tâches */
+.todo-list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ecf0f1;
+  padding: 10px 0;
+  text-align: left;
+
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+  text-align: left;
+  
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 18px;
+  color: #2ecc71;
+  text-align: left;
+}
+
+/* Pied de page */
+.info {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+.info p {
+  margin-bottom: 5px;
+}
+
+.info a {
+  color: #888;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+.todo-item .delete-task {
+  cursor: pointer;
+  display: none;
+  position: absolute; /* Positionnement absolu par rapport à la ligne de tâche parente */
+  right: 0; /* Aligner à droite */
+  top: 50%; /* Aligner au centre vertical */
+  transform: translateY(-50%); /* Décalage de moitié de la hauteur du bouton pour le centrer verticalement */
+  background-color: transparent; /* Rendre le fond transparent */
+  border: none; /* Supprimer la bordure */
+}
+
+.todo-item:hover .delete-task {
+  display: inline;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pour aligner les éléments sur la ligne et les espacer automatiquement */
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  position: relative;   /* Ajout pour positionner le bouton de suppression par rapport à la ligne de tâche */
+  text-align: left;
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 18px;
+  text-align: left;
+
+}
+/* Boutons */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent; /* Fond transparent */
+  color: #000;
+  transition: background-color 0.3s, border-color 0.3s; /* Ajout de la transition pour la couleur de fond et de la bordure */
+  border: 1px solid transparent; /* Ajout d'une bordure transparente */
+}
+
+.buttons-container button:hover {
+  
+  border-color: #3498db; /* Affichage de la bordure au survol */
+}
+
+.clear-completed-btn {
+  background-color: #9b59b6; 
+}
+
+.clear-completed-btn:hover {
+  background-color: #8e44ad; 
+}
+
+
+
+
+.buttons-container button.active {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+
+.todo-item .todo-text.completed {
+  text-decoration: line-through;
+}
+.todo-item .task-status:checked + label {
+  text-decoration: line-through;
+}
+
+/* Pour les écrans jusqu'à 600px de largeur */
+@media (max-width: 600px) {
+  .todoapp {
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+/* Pour les écrans entre 601px et 900px de largeur */
+@media (min-width: 601px) and (max-width: 900px) {
+  .todoapp {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+}
+
+/* Pour les écrans supérieurs à 900px de largeur */
+@media (min-width: 901px) {
+  .todoapp {
+    max-width: 600px;
+    margin: 50px auto;
+  }
+}
+
